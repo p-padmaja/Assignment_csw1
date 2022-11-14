@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3Q5</title>
+    <style>
+        #b {
+            padding: 60px;
+            display: none;
+        }
+        #a, #b {
+            border: 3px solid pink;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a">Click Here!</div>
+    <div id="b">Merry Christmas:)</div><br>
+    <button id="btn1">Move the box!</button><br><br>
+    <div id="c" style="background:dodgerblue;height:50px;width:50px;position:relative;"></div><br>
+    <button id="btn2">FadeIn</button><br><br>
+    <div id="d" style="width:40px;height:40px;display:none;background-color:brown;">
+    </div>
+    <span id="e">Mouse enter</span><br><br>
+    <span id="f">Mouse leave</span><br><br>
+    <button id="btn3">Hide</button>
+    <button id="btn4">Show</button><br>
+    <div id="g"> Double click above buttons to hide and show the paragraph.</div><br><br>
+    <button id="btn5">Display Text</button>
+    <div id="h"></div>
+    <p><a href="https://www.google.com" id="i">Google</a></p>
+    <button id="btn6">Show href Value</button>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $("#a").click(function () {
+            $("#b").slideDown("fast");
+        });
+        $("#btn1").click(function () {
+            $("#c").animate({ left: "900px" });
+        });
+        $("#btn2").click(function () {
+            $("#d").fadeIn(1000);
+        });
+        $("#e").mouseenter(function () {
+            alert("Your cursor touched the HTML elements.");
+        });
+        $("#f").mouseleave(function () {
+            alert("You left the paragraph elements.");
+        });
+
+        $("#btn3").dblclick(function () {
+            $("#g").hide();
+        });
+        $("#btn4").dblclick(function () {
+            $("#g").show();
+        });
+        $("#btn5").click(function () {
+            $("#h").text("Welcome to ITER");
+        });
+        $("#btn6").click(function () {
+            alert($("#i").attr("href"));
+        });
+    </script>
+</body>
+
+</html>

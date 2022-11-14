@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3Q3</title>
+</head>
+<body>
+    <form>
+        <input id="field1" type="text" value="Field1">
+        <input id="field2" type="text" value="Field2">
+    </form>
+    <p>Write something in the input field1,and then click outside the field to check loose focus.</p>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+       $("#field1").blur(function(){
+          // $(this).css("background-color","#cccccc");
+           alert("Lose focus from Field1");
+       });
+    </script>
+</body>
+</html>

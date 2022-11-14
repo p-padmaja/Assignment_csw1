@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3Q4</title>
+</head>
+
+<body>
+    <h3>Popup box without using alert,so let's try using Confirm Box</h3>
+    <button onclick="Function()">Try it</button>
+    <p id="a"></p>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        function Function() {
+            var txt;
+            if (confirm("Press a button!")) {
+                txt = "You pressed OK!";
+            }
+            else {
+                txt = "You pressed Cancel!";
+            }
+            $("#a").text(txt);
+        }
+
+    </script>
+</body>
+</html>
