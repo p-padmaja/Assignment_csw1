@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(223, 223, 223);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+        p,h1{
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="number"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #04aa6d;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            opacity: 0.7;
+        }
+        .container {
+            padding: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <img src="https://images.squarespace-cdn.com/content/v1/57713a8e2994cae381dd86fe/1510405002757-FP2W9HV8ZA0HP2IF3O6A/SOA-PNG.png" alt="SOA Logo" width="100px">
+        <h1>Login form</h1>
+    </p>
+    <form name="form1" onsubmit="return validateForm()">
+        
+        <div class="container">
+            <label for="uname"><b>UserName</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" />
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Email" name="email" />
+            <label for="mob"><b>Mobile Number</b></label>
+            <input type="text" placeholder="Mobile Number" name="mob"/><br/>
+            <label for="gender"><b>Gender</b></label><br />
+            <input for="male" type="radio" name="gender" />Male
+            <input for="female" type="radio" name="gender" />Female<br/> <br/>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" />
+            <button type="submit">Sign Up</button>
+        </div>
+    </form>
+</body>
+<script>
+    function validateForm() {
+        var a = document.forms["form1"]["uname"].value;
+        var b = document.forms["form1"]["email"].value;
+        var c = document.forms["form1"]["mob"].value;
+        var e = document.forms["form1"]["gender"].value;
+        var f = document.forms["form1"]["psw"].value;
+        if (a == "" || a == null) {
+            alert("Username is Empty");
+        }
+        else if (b == "" || b == null) {
+            alert("Email is Empty");
+        }
+        else if (c == "" || c == null) {
+            alert("Mobile Number is Empty");
+        }
+        else if (e == "" || e == null) {
+            alert("Gender is Empty");
+        }
+        else if (f == "" || f == null) {
+            alert("Password is Empty");
+        }
+        else {
+            alert("Sign Up successful")
+        }
+    }
+</script>
+
+</html>
