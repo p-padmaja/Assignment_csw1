@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9</title>
+    <style>
+        button {
+            border: none;
+            margin: 10px;
+           
+        }
+
+        button img {
+            width: 100px;
+            height: auto;
+
+        }
+
+        .comp-rock,
+        .comp-paper,
+        .comp-scissors {
+            display: none;
+            width: fit-content;
+        }
+
+        div img {
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Rock - Paper - Scissors</h1>
+
+        <button class="rock" value="1">
+            <img src="https://th.bing.com/th/id/OIP.a2l8cPK-jlgwZwksBebgiwAAAA?pid=ImgDet&w=310&h=310&rs=1" alt="rock"
+                height="80px">
+        </button>
+        <button class="paper" value="2">
+            <img src="https://th.bing.com/th/id/OIP.e8jK1pPfRZO0jv6NcBrUugHaGl?pid=ImgDet&rs=1" alt="paper"
+                height="80px">
+        </button>
+        <button class="scissors" value="3">
+            <img src="https://th.bing.com/th/id/OIP.pXc7hf1Og4bHuObsrBZkAwHaFj?pid=ImgDet&w=860&h=645&rs=1"
+                alt="scissors" height="80px">
+        </button>
+        <div class="comp-rock">
+            <img src="https://th.bing.com/th/id/OIP.a2l8cPK-jlgwZwksBebgiwAAAA?pid=ImgDet&w=310&h=310&rs=1" alt="rock"
+                height="80px">
+        </div>
+        <div class="comp-paper">
+            <img src="https://th.bing.com/th/id/OIP.e8jK1pPfRZO0jv6NcBrUugHaGl?pid=ImgDet&rs=1" alt="paper"
+                height="80px">
+
+        </div>
+        <div class="comp-scissors">
+            <img src="https://th.bing.com/th/id/OIP.pXc7hf1Og4bHuObsrBZkAwHaFj?pid=ImgDet&w=860&h=645&rs=1"
+                alt="scissors" height="80px">
+        </div>
+        <p></p>
+    </div>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $("button").click(function () {
+            let compInp = Math.floor((Math.random() * 3) + 1);
+            let userInp = $(this).val();
+            console.log(compInp);
+            console.log(userInp);
+            switch (compInp) {
+                case 1:
+                    $(".comp-rock").css("display", "block");
+                    if (userInp == 1) {
+                        $("p").text("draw");
+                       
+                    }
+                    else if (userInp == 2) {
+                        $("p").text("user wins");
+                        
+                    }
+                    else {
+                        $("p").text("computer wins");
+                       
+                    }
+                    break;
+                case 2:
+                    $(".comp-paper").css("display", "block");
+                    if (userInp == 1) {
+                        $("p").text("computer wins");
+
+                    }
+                    else if (userInp == 2) {
+                        $("p").text("draw");
+
+                    }
+                    else {
+                        $("p").text("user wins");
+
+                    }
+                    break;
+                case 3:
+                    $(".comp-scissors").css("display", "block");
+                    if (userInp == 1) {
+                        $("p").text("draw");
+
+                    }
+                    else if (userInp == 2) {
+                        $("p").text("computer wins");
+
+                    }
+                    else {
+                        $("p").text("computer wins");
+                    }
+                    break;
+            }
+            if (compInp == userInp) {
+                $("p").text("user wins");
+            }
+            else {
+                $("p").text("computer wins");
+            }
+        })
+    </script>
+</body>
+
+</html>
