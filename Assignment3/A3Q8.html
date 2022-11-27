@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3Q8</title>
+    <style>
+        *{
+            background-color:rgb(238, 238, 230)
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th{
+            background-color: darkgray;
+        }
+        td, th {
+            border: 1px solid #000000;
+            text-align: center;
+            padding: 8px;
+        }
+       h2{
+        text-align: center;
+        text-decoration: underline;
+    
+       }
+       p{
+        text-align:center;
+       }
+      
+    </style>
+</head>
+
+<body>
+    <h2>-JOB LISTINGS-</h2>
+    <p><input id="myInput" type="text" placeholder="Search.."></p>
+    <br><br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Job Category</th>
+                <th>Job listing</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            <tr>
+                <td>FRONT-END DEVELOPER</td>
+                <td>SD1</td>
+                <td>DELHI</td>
+            </tr>
+            <tr>
+                <td>BACK-END DEVELOPER</td>
+                <td>SD2</td>
+                <td>BHUBANESWER</td>
+            </tr>
+            <tr>
+                <td>DATA ANALIST</td>
+                <td>SD3</td>
+                <td>GOA</td>
+            </tr>
+            <tr>
+                <td>ML ENGINEER</td>
+                <td>JD1</td>
+                <td>PUNE</td>
+            </tr>
+            <tr>
+                <td>CIVIL ENGINEER</td>
+                <td>SD2</td>
+                <td>BANGALORE</td>
+            </tr>
+            <tr>
+                <td>MECHANICAL ENGINEER</td>
+                <td>JD2</td>
+                <td>HYDERABAD</td>
+            </tr>
+            <tr>
+                <td>ELECTRICAL ENGINEER</td>
+                <td>SD1</td>
+                <td>MUMBAI</td>
+            </tr>
+            <tr>
+                <td>ELECTRICAL AND TELECOMMUNICATION ENGINEER</td>
+                <td>JD3</td>
+                <td>PUNE</td>
+            </tr>
+            <tr>
+                <td>ELECTRICAL AND EECTRONICS ENGINEER</td>
+                <td>SD2</td>
+                <td>BHUBANESWAR</td>
+            </tr>
+            <tr>
+                <td>INFORMATION TECHNOLOGY ENGINEER</td>
+                <td>SD1</td>
+                <td>BANGALORE</td>
+            </tr>
+            <tr>
+                <td>CHEMICAL ENGINEER</td>
+                <td>JD2</td>
+                <td>HYDERABAD</td>
+            </tr>
+            <tr>
+                <td>SOFTWARE ENGINEER</td>
+                <td>SD2</td>
+                <td>KOLKATA</td>
+            </tr>
+            <tr>
+                <td>MINING ENGINEER</td>
+                <td>JD1</td>
+                <td>PUNE</td>
+            </tr>
+            <tr>
+                <td>AEROSPACE ENGINEER</td>
+                <td>SD3</td>
+                <td>MUMBAI</td>
+            </tr>
+            <tr>
+                <td>BIOTECH ENGINEER</td>
+                <td>JD2</td>
+                <td>HYDERABAD</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+
+
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value)
+                    > -1)
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
