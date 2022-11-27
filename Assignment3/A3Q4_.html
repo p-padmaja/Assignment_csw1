@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A3Q4</title>
+    <style>
+        #selected{
+            width:400px;
+             height:100px;
+             display:none; 
+             background-color:black; 
+             color:white; 
+             border-radius:8px;
+             text-align: center;
+             
+        }
+    </style>
+</head>
+
+
+<body>
+    <p>POP UP</p>
+    <div id="selected">
+        Hello :)
+        <br>Popup box appeared
+    </div>
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $("p").click(function () {
+            $('#selected').css({ "display": "block", "width": "200px", "height": "100px" })
+        })
+    </script>
+</body>
+
+</html>
